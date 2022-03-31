@@ -6,9 +6,9 @@ const Header: React.FC = () => {
             {/* nav bar */}
             <div className='flex justify-between item-center'>
                 <div>
-                    <a href="#" className="inline-block  py-3   flex justify-items-start"><img src='images/logo-bookmark.svg' /></a>
+                    <a href="#" className="flex lg:inline-block py-3 justify-items-start"><img src='images/logo-bookmark.svg' /></a>
                 </div>
-                <div>
+                <div className='hidden lg:block'>
                     <a href="#" className="inline-block px-10 py-3 text-sm text-black uppercase hover:text-primary-softRed">features</a>
                     <a href="#" className="inline-block px-10 py-3 text-sm text-black uppercase hover:text-primary-softRed">pricing</a>
                     <a href="#" className="inline-block px-10 py-3 text-sm text-black uppercase hover:text-primary-softRed">contact</a>
@@ -16,21 +16,21 @@ const Header: React.FC = () => {
                 </div>
             </div>
             {/* hero section */}
-            <div className='flex py-20 '>
+            <div className='flex flex-col lg:flex-row lg:py-20 '>
                 {/* cta section */}
-                <div className='mt-16'>
-                    <h1 className='text-5xl font-medium'>A Simple Bookmark Manager</h1>
-                    <p className='py-6 w-3/4 text-lg text-gray-400'>
+                <div className='order-last lg:order-1 lg:mt-16'>
+                    <h1 className='text-2xl text-center font-medium lg:text-left lg:text-5xl'>A Simple Bookmark Manager</h1>
+                    <p className='lg:w-3/4 py-6 text-center lg:text-left lg:text-lg text-gray-400'>
                         A clean and simple interface to organize your favourite websites. Open a new
                         browser tab and see your sites load instantly. Try it for free.
                     </p>
                     {/* cta buttons */}
-                    <div>
-                        <a href="#" className="inline-block px-10 py-3 text-sm text-white rounded bg-primary-softBlue hover:text-primary-softRed hover:ring-2 hover:ring-primary-softBlue hover:bg-white hover:text-primary-softBlue ">Get it on Chrome</a>
-                        <a href="#" className="inline-block px-12 mx-10 py-3 text-sm text-black rounded bg-slate-100 shadow-2xl hover:text-primary-softRed hover:ring-2 hover:ring-slate-900 hover:bg-white hover:text-slate-900">Get it on Firefox</a>
+                    <div className="h-11 w-11  md:w-auto md:h-auto sm:flex sm:justify-center sm:w-auto lg:justify-start">
+                        <a href="#" className="whitespace-nowrap text-[.8rem] text-center px-3 py-3 md:inline-block md:px-10 md:py-3 md:text-sm text-white rounded bg-primary-softBlue  hover:ring-2 hover:ring-primary-softBlue hover:bg-white hover:text-primary-softBlue ">Get it on Chrome</a>
+                        <a href="#" className="whitespace-nowrap text-[.8rem] text-center px-3 py-3 mx-5 md:inline-block md:px-9 md:py-3 md:mx-10 md:text-sm text-black rounded shadow-2xl bg-slate-100  hover:ring-2 hover:ring-slate-900 hover:bg-white hover:text-slate-900">Get it on Firefox</a>
                     </div>
                 </div>
-                <img src="images/illustration-hero.svg" alt="hero" className='w-[92rem] -mr-24' />
+                <img src="images/illustration-hero.svg" alt="hero" className=' mt-8 w-full lg:w-[92rem] lg:-mr-24 lg:order-last' />
             </div>
 
         </header>
