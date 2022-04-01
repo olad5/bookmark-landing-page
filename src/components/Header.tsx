@@ -1,3 +1,5 @@
+import Button from './Button'
+
 const Header: React.FC = () => {
 
     return (
@@ -12,7 +14,8 @@ const Header: React.FC = () => {
                     <a href="#" className="inline-block xl:px-10 py-3 lg:px-5 text-sm lg:text-xs text-black uppercase hover:text-primary-softRed">features</a>
                     <a href="#" className="inline-block xl:px-10 py-3 lg:px-5 text-sm lg:text-xs text-black uppercase hover:text-primary-softRed">pricing</a>
                     <a href="#" className="inline-block xl:px-10 py-3 lg:px-5 text-sm lg:text-xs text-black uppercase hover:text-primary-softRed">contact</a>
-                    <a href="#" className="inline-block xl:px-10 py-3 lg:px-5 text-sm lg:text-xs text-white uppercase rounded bg-primary-softRed hover:text-primary-softRed hover:ring-2 hover:ring-red-700 hover:bg-white "> login </a>
+                    {/* <a href="#" className="inline-block xl:px-10 py-3 lg:px-5 text-sm lg:text-xs text-white uppercase rounded bg-primary-softRed hover:text-primary-softRed hover:ring-2 hover:ring-red-700 hover:bg-white "> login </a> */}
+                    <Button  color='red'>LOGIN</Button>
                 </div>
             </nav>
             {/* hero section */}
@@ -25,9 +28,15 @@ const Header: React.FC = () => {
                         browser tab and see your sites load instantly. Try it for free.
                     </p>
                     {/* cta buttons */}
-                    <div className="h-11 w-11  md:w-auto md:h-auto sm:flex sm:justify-center sm:w-auto lg:justify-start">
-                        <a href="#" className="whitespace-nowrap text-[.8rem] text-center px-3 py-3 md:inline-block md:px-10 md:py-3 md:text-sm lg:px-3 text-white rounded bg-primary-softBlue  hover:ring-2 hover:ring-primary-softBlue hover:bg-white hover:text-primary-softBlue ">Get it on Chrome</a>
-                        <a href="#" className="whitespace-nowrap text-[.8rem] text-center px-3 py-3 mx-5 md:inline-block md:px-9 md:py-3 md:mx-10 md:text-sm lg:px-3 text-black rounded shadow-2xl bg-slate-100  hover:ring-2 hover:ring-slate-900 hover:bg-white hover:text-slate-900">Get it on Firefox</a>
+                    <div className=" gap-4 h-19 w-full  flex justify-center item-center  md:w-auto md:h-auto sm:flex sm:justify-center sm:w-auto lg:justify-start">
+                        {/* <a href="#" className="whitespace-nowrap text-[.8rem] text-center px-3 py-3 md:inline-block md:px-10 md:py-3 md:text-sm lg:px-3 text-white rounded bg-primary-softBlue  hover:ring-2 hover:ring-primary-softBlue hover:bg-white hover:text-primary-softBlue ">Get it on Chrome</a> */}
+                        <Button  color='blue'>Get it on Chrome</Button>
+                        {/* <Button  color='red'>Get it on Firefox</Button> */}
+                        <a href="#" className={ `px-4 text-[.7rem] sm:text-[.8rem] inline-block xl:px-10 py-3 lg:px-5 text-sm sm:px-9 lg:text-xs text-black  
+                          rounded bg-slate-100 hover:bg-white hover:ring-2 hover:ring-slate-900  shadow-2xl` }> 
+                          {/* hover:text-primary-softRed  hover:ring-red-700 hover:bg-white hover:ring-2  ` }> */} 
+                            Get it on Firefox
+                        </a>
                     </div>
                 </div>
                 <img src="images/illustration-hero.svg" alt="hero" className=' mt-8 w-full md:w-[92rem] lg:w-[28rem] xl:w-[92rem] md:-mr-24 lg:-mr-4 lg:order-last ' />

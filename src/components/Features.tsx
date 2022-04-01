@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const Features: React.FC = () => {
 
     return (
@@ -23,17 +25,17 @@ const Features: React.FC = () => {
             <div className='px-3 lg:flex lg:px-6 lg:gap-12 xl:gap-0'>
                 <img src="images/illustration-features-tab-1.svg" alt="hero" className=' w-full md:w-[97rem] lg:w-[27rem] xl:w-[97rem] md:mr-24 xl:mr-24 lg:mr-2' />
 
-                <div className='mt-16'>
+                <div className='mt-16 sm:flex sm:flex-col  items-center lg:block'>
                     <h1 className='text-center mb-2 text-2xl lg:text-4xl lg:text-left font-medium'>
                         Bookmark in one click
                     </h1>
-                    <p className='text-center md:text-center  sm:w-3/4 md:w-full  md:py-6 lg:text-left md:text-lg text-gray-400'>
+                    <p className='text-center sm:m-0  md:text-center  sm:w-3/4 md:w-full  md:py-6 lg:text-left md:text-lg text-gray-400'>
                         Organize your bookmarks however you like. Our simple drag-and-drop interface
                         gives you complete control over how you manage your favourite sites.
                     </p>
                     {/* cta buttons */}
                     <div>
-                        <a href="#" className="hidden lg:inline-block px-10 py-3 text-sm text-white rounded bg-primary-softBlue hover:ring-2 hover:ring-primary-softBlue hover:bg-white hover:text-primary-softBlue ">More Info</a>
+                            <Button state="hidden lg:inline-block">More Info</Button>
                     </div>
                 </div>
             </div>
