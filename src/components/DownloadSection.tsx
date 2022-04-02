@@ -23,7 +23,7 @@ const DownloadSection: React.FC = () => {
   ];
 
   return (
-    <div className="container flex w-7/12 flex-col items-center mx-auto mb-12">
+    <div className="container flex  w-11/12 xl:w-7/12 flex-col items-center mx-auto mb-12">
       <h3 className="mb-4 text-2xl font-medium text-center">
         Download the extension
       </h3>
@@ -32,7 +32,7 @@ const DownloadSection: React.FC = () => {
         got a favourite you’d like us to prioritize.
       </p>
       {/* Download cards */}
-      <div className="w-10/12 flex items-start  mt-4 gap-5 min-h-[25rem] ">
+      <div className=" w-10/12 lg:w-full lg:flex items-start  mt-4 gap-5 min-h-[25rem] ">
         {cards.map((card) => (
           <DownloadCard card={card}></DownloadCard>
         ))}
