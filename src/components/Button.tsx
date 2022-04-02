@@ -1,6 +1,5 @@
 interface IProps {
   color?: string;
-  // state?: "hidden"| 'inline-block';
   state?: string;
 }
 
@@ -9,11 +8,6 @@ const Button: React.FC<IProps> = ({
   color,
   state = "inline-block",
 }) => {
-  // console.log(children);
-  // console.log(color);
-
-  // - <div className={`${styles.divClasses} ${expanded ? 'block' : 'hidden'}`} >whatever</div>
-
   return (
     <a
       href="#"
@@ -28,12 +22,7 @@ const Button: React.FC<IProps> = ({
               } 
               hover:bg-white hover:ring-2  `}
     >
-      {/* hover:text-primary-softRed  hover:ring-red-700 hover:bg-white hover:ring-2  ` }> */}
-      {/* hover:text-primary-softRed  hover:ring-red-700 hover:bg-white hover:ring-2  ` }> */}
-            {/* hover:text-primary-softRed  hover:ring-red-700 hover:bg-white hover:ring-2  ` }> */}
-                    {/* hover:text-primary-softRed  hover:ring-red-700 hover:bg-white hover:ring-2  ` }> */}
       {children}
-      hello there
     </a>
   );
 };
