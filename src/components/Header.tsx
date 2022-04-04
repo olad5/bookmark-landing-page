@@ -49,15 +49,15 @@ const Header: React.FC = () => {
             free.
           </p>
           {/* cta buttons */}
-          <div className=" gap-4 h-19 w-full  flex justify-center item-center  md:w-auto md:h-auto sm:flex sm:justify-center sm:w-auto lg:justify-start">
-            <div className="inline-block">
-              <Button padding="xl:px-4" color="blue">
+          <div className=" gap-4 h-19 w-full  flex sm:justify-center justify-center   md:w-auto md:h-auto sm:flex  sm:w-auto lg:justify-start">
+            <div className="inline-block h-10">
+              <Button padding="xl:px-4" fontSize="text-[.65rem]" color="blue">
                 Get it on Chrome
               </Button>
             </div>
             <a
               href="#"
-              className={`px-4 text-[.7rem] sm:text-[.8rem] inline-block xl:px-4 py-3 lg:px-5 text-sm sm:px-9 lg:text-xs text-black  
+              className={` text-[.65rem] py-2  px-4  sm:text-[.8rem] inline-block xl:px-4 md:py-3 lg:px-5 text-sm sm:px-9 lg:text-xs text-black  
                           rounded bg-slate-100 hover:bg-white hover:ring-2 hover:ring-slate-900  shadow-2xl`}
             >
               Get it on Firefox
