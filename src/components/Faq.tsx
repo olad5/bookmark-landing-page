@@ -59,7 +59,9 @@ const FaqSection: React.FC = () => {
         ))}
       </div>
       <div>
-        <Button state="">More Info</Button>
+        <Button padding="xl:px-4" state="">
+          More Info
+        </Button>
       </div>
     </div>
   );

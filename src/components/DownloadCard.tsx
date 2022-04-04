@@ -26,7 +26,9 @@ const DownloadCard: React.FC<IProps> = ({ card }) => {
 
       <hr className="my-4 w-full border-t-4 border-dotted   border-slate-200" />
 
-      <Button> Add & Install Extension </Button>
+      <div className="w-full flex justify-center items-center">
+        <Button> Add & Install Extension </Button>
+      </div>
     </div>
   );
 };

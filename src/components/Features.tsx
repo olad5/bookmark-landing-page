@@ -52,8 +52,10 @@ const Features: React.FC = () => {
             favourite sites.
           </p>
           {/* cta buttons */}
-          <div>
-            <Button state="hidden lg:inline-block">More Info</Button>
+          <div className="w-2/4">
+            <Button padding="xl:px-4" state="hidden lg:inline-block">
+              More Info
+            </Button>
           </div>
         </div>
       </div>

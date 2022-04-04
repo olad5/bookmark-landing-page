@@ -1,17 +1,19 @@
 interface IProps {
   color?: string;
   state?: string;
+  padding?: string;
 }
 
 const Button: React.FC<IProps> = ({
   children,
   color,
+  padding,
   state = "inline-block",
 }) => {
   return (
     <a
       href="#"
-      className={`px-4 text-[.7rem] sm:text-[.8rem] ${state} xl:px-10 py-3 lg:px-5 text-sm sm:px-9 lg:text-xs text-white  
+      className={`w-full  max-w-max ${padding} px-4 sm:px-9 lg:px-5 xl:px-10 text-[.7rem] sm:text-[.8rem] ${state}  py-3  text-sm lg:text-xs text-white  
               rounded ${
                 color === "red" ? "bg-primary-softRed" : "bg-primary-softBlue"
               } 
