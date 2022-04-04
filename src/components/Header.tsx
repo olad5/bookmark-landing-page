@@ -1,4 +1,5 @@
 import Button from "./Button";
+import { LogoIcon } from "../components/LogoIcon";
 
 const Header: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ const Header: React.FC = () => {
       <nav className="flex justify-between item-center lg:px-4 ">
         <div>
           <a href="#" className="flex lg:inline-block py-3 justify-items-start">
-            <img src="images/logo-bookmark.svg" />
+            <LogoIcon />
           </a>
         </div>
         <div className="hidden lg:block">

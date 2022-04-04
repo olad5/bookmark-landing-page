@@ -4,6 +4,7 @@ import Features from "./components/Features";
 import DownloadSection from "./components/DownloadSection";
 import FaqSection from "./components/Faq";
 import ContactForm from "./components/ContactForm";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <DownloadSection />
       <FaqSection />
       <ContactForm />
+      <Footer />
     </>
   );
 }
