@@ -1,6 +1,6 @@
+import { useState } from "react";
 import Button from "./Button";
 const FaqSection: React.FC = () => {
-  // TODO: mayb this is where you would have your questions
   const questions = [
     {
       id: 0,
@@ -16,7 +16,7 @@ const FaqSection: React.FC = () => {
     },
     {
       id: 2,
-      question: " Is there a mobile app? hrome",
+      question: " Is there a mobile app?",
       answer:
         " Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum. ",
     },
@@ -28,6 +28,17 @@ const FaqSection: React.FC = () => {
     },
   ];
 
+  const [selected, setSelected] = useState<number | null>(null);
+
+  // toggle the accordion
+  const toggle = (id: number) => {
+    if (selected === id) {
+      return setSelected(null);
+    }
+
+    setSelected(id);
+  };
+
   return (
     <div className="container flex  w-11/12 xl:w-7/12 flex-col items-center mx-auto mb-12">
       <h3 className="mb-4 text-2xl font-medium text-center">
@@ -38,21 +49,31 @@ const FaqSection: React.FC = () => {
         answered please feel free to email us.
       </p>
       <div className="  border-t-[.5px] border-b-[.5px]  flex flex-col  w-3/5 border-slate-200 mx-6 mt-4 mb-12  ">
-        {/* TODO: change all these a tags to divs, so you can have a text and the dropdown arrow inside of it */}
-        {questions.map((question) => (
+        {questions.map((question, id) => (
           <>
-            <div className="flex items-center justify-between">
-              <a
-                href=""
-                className="inline-block py-3 text-xs sm:text-sm md:text-md lg:text-lg  w-fit text-black  hover:text-primary-softBlue"
-              >
+            <div
+              className=" flex items-center justify-between cursor-pointer"
+              onClick={() => toggle(id)}
+            >
+              <div className=" inline-block py-3 text-xs sm:text-sm md:text-md lg:text-lg  w-fit text-black  hover:text-primary-softRed">
                 {question.question}
-              </a>
-              <img
-                src="/images/icon-arrow.svg"
-                className="w-3 object-contain h-4 mr-4"
-                alt=""
-              />
+              </div>
+              {selected === id ? (
+                <img
+                  src="/images/icon-arrow.svg"
+                  className="w-3 object-contain rotate-180 h-4 mr-4"
+                  alt=""
+                />
+              ) : (
+                <img
+                  src="/images/icon-arrow.svg"
+                  className="w-3 object-contain  h-4 mr-4"
+                  alt=""
+                />
+              )}
+            </div>
+            <div className={selected === id ? "answer show" : "answer"}>
+              {question.answer}
             </div>
             <hr className=" w-full border-t-1 border-slate-200  " />
           </>
