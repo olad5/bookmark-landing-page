@@ -3,6 +3,7 @@ interface IProps {
   state?: string;
   padding?: string;
   fontSize?: string;
+  handleClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const Button: React.FC<IProps> = ({
@@ -10,11 +11,11 @@ const Button: React.FC<IProps> = ({
   color,
   padding,
   fontSize,
+  handleClick,
   state = "inline-block",
 }) => {
   return (
-    <a
-      href="#"
+    <button
       className={`w-full  max-w-max ${padding} px-4 sm:px-9 lg:px-5 xl:px-10 ${fontSize}  sm:text-[.8rem] ${state}  py-3  text-sm lg:text-xs lg:text-[.7rem] text-white  
               rounded ${
                 color === "red" ? "bg-primary-softRed" : "bg-primary-softBlue"
@@ -25,9 +26,10 @@ const Button: React.FC<IProps> = ({
                   : "hover:text-primary-softBlue hover:ring-primary-softBlue"
               } 
               hover:bg-white hover:ring-2  `}
+      onClick={(event) => handleClick && handleClick(event)}
     >
       {children}
-    </a>
+    </button>
   );
 };
 
