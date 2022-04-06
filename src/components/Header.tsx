@@ -6,7 +6,7 @@ const Header: React.FC = () => {
     /* page container */
     <header className="container px-4 py-8 mx-auto">
       {/* nav bar */}
-      <nav className="flex justify-between item-center lg:px-4 ">
+      <nav className="flex justify-between items-center lg:px-4 ">
         <div>
           <a href="#" className="flex lg:inline-block py-3 justify-items-start">
             <LogoIcon />
@@ -34,6 +34,11 @@ const Header: React.FC = () => {
           <div className="inline-block">
             <Button color="red">LOGIN</Button>
           </div>
+        </div>
+        <div className="lg:hidden">
+          <a href="#">
+            <img src="/images/icon-hamburger.svg" alt="" />
+          </a>
         </div>
       </nav>
       {/* hero section */}
