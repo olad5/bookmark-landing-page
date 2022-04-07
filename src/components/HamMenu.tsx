@@ -7,7 +7,7 @@ interface IProps {
 
 const HamMenu: React.FC<IProps> = ({ handleMenuClick }) => {
   return (
-    <div className=" flex flex-col  w-full  items-center mx-auto mb-12 bg-neutral-veryDarkBlue  py-8 lg:hidden">
+    <div className=" flex flex-col  w-full  h-full items-center mx-auto mb-12 bg-neutral-veryDarkBlue  py-8 lg:hidden">
       <nav className="px-4 w-full flex flex-col items-center ">
         <div className="flex w-full  xs:px-0 justify-between items-center   ">
           <div>

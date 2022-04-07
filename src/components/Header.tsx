@@ -22,7 +22,7 @@ const Header: React.FC = () => {
     /* page container */
     <div className="relative">
       {open ? (
-        <div className=" w-full absolute ">
+        <div className=" w-full fixed  h-[100vh]">
           <HamMenu handleMenuClick={handleMenuClick} />
         </div>
       ) : null}
