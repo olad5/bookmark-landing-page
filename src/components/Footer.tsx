@@ -32,14 +32,18 @@ const Footer: React.FC = () => {
             </a>
           </div>
           <div className=" mb-9 mt-3 justify-between items-center flex w-20 lg:mb-0 lg:mt-0">
-            <img
-              className="inline-block object-scale-down mr-0 lg:mr-8"
-              src="images/icon-facebook.svg"
-            />
-            <img
-              className="inline-block object-scale-down"
-              src="images/icon-twitter.svg"
-            />
+            <a href="#">
+              <img
+                className="inline-block object-scale-down mr-0 lg:mr-8"
+                src="images/icon-facebook.svg"
+              />
+            </a>
+            <a href="#">
+              <img
+                className="inline-block object-scale-down stroke-gray-800 "
+                src="images/icon-twitter.svg"
+              />
+            </a>
           </div>
         </nav>
       </div>
