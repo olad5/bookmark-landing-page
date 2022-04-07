@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AccordionItem from "./AccordionItem";
 import Button from "./Button";
 const FaqSection: React.FC = () => {
   const questions = [
@@ -49,34 +50,13 @@ const FaqSection: React.FC = () => {
         answered please feel free to email us.
       </p>
       <div className="  border-t-[.5px] border-b-[.5px]  flex flex-col  w-3/5 border-slate-200 mx-6 mt-4 mb-12  ">
-        {questions.map((question, id) => (
-          <>
-            <div
-              className=" flex items-center justify-between cursor-pointer"
-              onClick={() => toggle(id)}
-            >
-              <div className=" inline-block py-3 text-xs sm:text-sm md:text-md lg:text-lg  w-fit text-black  hover:text-primary-softRed">
-                {question.question}
-              </div>
-              {selected === id ? (
-                <img
-                  src="/images/icon-arrow.svg"
-                  className="w-3 object-contain rotate-180 h-4 mr-4"
-                  alt=""
-                />
-              ) : (
-                <img
-                  src="/images/icon-arrow.svg"
-                  className="w-3 object-contain  h-4 mr-4"
-                  alt=""
-                />
-              )}
-            </div>
-            <div className={selected === id ? "answer show" : "answer"}>
-              {question.answer}
-            </div>
-            <hr className=" w-full border-t-1 border-slate-200  " />
-          </>
+        {questions.map((question) => (
+          <AccordionItem
+            question={question}
+            key={question.id}
+            active={selected === question.id}
+            onClick={() => toggle(question.id)}
+          />
         ))}
       </div>
       <div>
