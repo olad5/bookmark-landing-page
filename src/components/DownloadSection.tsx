@@ -34,7 +34,7 @@ const DownloadSection: React.FC = () => {
       {/* Download cards */}
       <div className=" w-10/12 lg:w-full lg:flex items-start  mt-4 gap-5 min-h-[25rem] ">
         {cards.map((card) => (
-          <DownloadCard card={card}></DownloadCard>
+          <DownloadCard key={card.id} card={card}></DownloadCard>
         ))}
       </div>
     </div>

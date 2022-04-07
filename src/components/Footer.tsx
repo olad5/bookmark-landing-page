@@ -1,4 +1,4 @@
-import { LogoIcon } from "../components/LogoIcon";
+import { LogoIcon } from "../components/Icons/LogoIcon";
 
 const Footer: React.FC = () => {
   return (
