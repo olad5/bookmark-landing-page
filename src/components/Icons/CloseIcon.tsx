@@ -2,8 +2,6 @@ interface IProps {
   onClick: (event: React.MouseEvent<HTMLOrSVGElement>) => void;
 }
 
-// TODO: add the handlemenuclick prop
-// export const LogoIcon: React.FC<IProps> = ({ fillColor }) => (
 export const CloseIcon: React.FC<IProps> = ({ onClick }) => (
   <svg
     onClick={onClick}

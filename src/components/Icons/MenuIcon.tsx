@@ -2,8 +2,6 @@ interface IProps {
   onClick: (event: React.MouseEvent<HTMLOrSVGElement>) => void;
 }
 
-// TODO: remove the props and interface here
-// export const LogoIcon: React.FC<IProps> = ({ fillColor }) => (
 export const MenuIcon: React.FC<IProps> = ({ onClick }) => (
   <svg
     onClick={onClick}
