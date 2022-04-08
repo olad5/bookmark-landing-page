@@ -16,10 +16,8 @@ const Button: React.FC<IProps> = ({
 }) => {
   return (
     <button
-      className={`w-full  max-w-max ${padding} px-4 sm:px-9 lg:px-5 xl:px-10 ${fontSize}  sm:text-[.8rem] ${state}  py-3  text-sm lg:text-xs lg:text-[.7rem] text-white  
-              rounded ${
-                color === "red" ? "bg-primary-softRed" : "bg-primary-softBlue"
-              } 
+      className={` w-max whitespace-nowrap  max-w-max ${padding} px-4 sm:px-9 lg:px-5 xl:px-10 ${fontSize}  sm:text-[.8rem] ${state}  py-3  text-sm lg:text-xs lg:text-[.7rem] text-white  rounded 
+      ${color === "red" ? "bg-primary-softRed" : "bg-primary-softBlue"} 
               ${
                 color === "red"
                   ? "hover:text-primary-softRed hover:ring-red-700"
